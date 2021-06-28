@@ -1,0 +1,65 @@
+<template>
+  <div class="progressItem">
+    <div :style="{ width, height, backgroundColor }" class="progressBar">
+      <div :style="{ width: `${progress}%`, background: progressColor }"></div>
+    </div>
+    <span v-if="textShow">{{ progress }}%</span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "T-progress",
+  props: {
+    width: {
+      type: String,
+      default: () => "100%",
+    },
+    height: {
+      type: String,
+      default: () => "10px",
+    },
+    progress: {
+      type: Number,
+      default: () => 10,
+    },
+    progressColor: {
+      type: String,
+      default: () =>
+        "linear-gradient(to right, rgb(61, 137, 220), rgb(1, 254, 254))",
+    },
+    backgroundColor: {
+      type: String,
+      default: () => "rgba(48, 69, 104, 0.2)",
+    },
+    textShow: {
+      type: Boolean,
+      default: () => false,
+    },
+  },
+};
+</script>
+
+<style scoped>
+.progressItem {
+  display: flex;
+  align-items: center;
+}
+
+.progressItem span {
+  margin: 0 10px;
+}
+
+.progressItem .progressBar {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.progressItem .progressBar div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: width 1s;
+}
+</style>
