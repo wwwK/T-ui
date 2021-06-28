@@ -1,7 +1,7 @@
 <template>
   <div
     class="Tcard"
-    :style="{ background: backgroundCard, width }"
+    :style="{ ...TcardStyle }"
     :class="{ 'Tcard-border': border }"
   >
     <!-- 标题 -->
@@ -50,6 +50,15 @@ export default {
       default: () => true,
     },
   },
+  computed: {
+    // Tcard外层样式
+    TcardStyle() {
+      return {
+        background: this.backgroundCard,
+        width: this.width,
+      };
+    },
+  },
 };
 </script>
 
@@ -59,11 +68,11 @@ export default {
   padding: 5px 10px;
   box-sizing: border-box;
   position: relative;
+  transition: all 0.5s;
 
   &.Tcard-border {
     border: 1px solid rgba(170, 170, 170, 0.5);
     border-radius: 10px;
-    transition: all 0.2s;
   }
   &.Tcard-border:hover {
     box-shadow: 0px 0px 10px 1px gray;

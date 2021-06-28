@@ -1,7 +1,7 @@
 <template>
   <div class="progressItem">
-    <div :style="{ width, height, backgroundColor }" class="progressBar">
-      <div :style="{ width: `${progress}%`, background: progressColor }"></div>
+    <div :style="{ ...progressBarStyle }" class="progressBar">
+      <div :style="{ ...progressStyle }"></div>
     </div>
     <span v-if="textShow">{{ progress }}%</span>
   </div>
@@ -35,6 +35,23 @@ export default {
     textShow: {
       type: Boolean,
       default: () => false,
+    },
+  },
+  computed: {
+    // 外层样式
+    progressBarStyle() {
+      return {
+        width: this.width,
+        height: this.height,
+        backgroundColor: this.backgroundColor,
+      };
+    },
+    // 内层进度样式
+    progressStyle() {
+      return {
+        width: `${this.progress}%`,
+        background: this.progressColor,
+      };
     },
   },
 };

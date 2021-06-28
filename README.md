@@ -16,10 +16,26 @@ Attributes :
 
 ## 卡片 T-card
 Attributes :
->width 宽度 string 默认:500px
->title 标题 string 默认:''
+>width 宽度 string 默认: /
+>title 标题 string 默认: /
 >titleColor 标题颜色 string 默认:black
 >line 标题线 boolean 默认: true
 >backgroundCard 背景色 string 默认:white
 >border 边框+hover boolean 默认:true
 >borderColor 
+
+## 提示框 T-alert
+Attributes :
+>width 宽度 string 默认: /
+>title 标题 string 默认: /
+>color 颜色 16进制颜色 默认: #5C9FFF
+
+## 头像 T-avatar
+<font color='red'>当设置了src时text，textColor不生效</font>
+Attributes :
+>size 宽高 string 默认: 50px
+>radius 方圆 boolean 默认: true
+>background 背景颜色 string 默认: gray
+>text 文本 string 默认: T
+>textColor 文本颜色 string 默认: white
+>src 图片路径 string 默认: / 
