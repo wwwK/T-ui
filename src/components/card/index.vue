@@ -68,7 +68,7 @@ export default {
   padding: 5px 10px;
   box-sizing: border-box;
   position: relative;
-  transition: all 0.5s;
+  transition: all 0.3s;
 
   &.Tcard-border {
     border: 1px solid rgba(170, 170, 170, 0.5);

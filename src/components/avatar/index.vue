@@ -57,6 +57,7 @@ export default {
   overflow: hidden;
   user-select: none;
   transition: all 0.3s;
+  cursor: pointer;
 
   .TavatarImage {
     width: 100%;

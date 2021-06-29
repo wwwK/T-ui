@@ -73,6 +73,7 @@ export default {
 .Talert {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   margin: 5px;
   padding: 5px 15px;
   border-radius: 8px;
