@@ -21,8 +21,8 @@ Attributes :
 >titleColor 标题颜色 string 默认:black
 >line 标题线 boolean 默认: true
 >backgroundCard 背景色 string 默认:white
->border 边框+hover boolean 默认:true
->borderColor 
+>border 边框+圆角 boolean 默认:true
+>shadow 阴影出现的时机 (always,hover,never) 默认: hover
 
 ## 提示框 T-alert
 Attributes :

@@ -2,7 +2,7 @@
   <div
     class="Tcard"
     :style="{ ...TcardStyle }"
-    :class="{ 'Tcard-border': border }"
+    :class="[{ 'Tcard-border': border }, TcardClass]"
   >
     <!-- 标题 -->
     <h1 :class="{ 'Tcard-title': line }" :style="{ color: titleColor }">
@@ -49,14 +49,28 @@ export default {
       type: Boolean,
       default: () => true,
     },
+    shadow: {
+      type: String,
+      default: () => "hover",
+    },
   },
   computed: {
-    // Tcard外层样式
+    // Tcard外层Style
     TcardStyle() {
       return {
         background: this.backgroundCard,
         width: this.width,
       };
+    },
+    // Tcard外层Class
+    TcardClass() {
+      if (this.shadow === "never") {
+        return "";
+      } else if (this.shadow === "always") {
+        return "shadowAlways";
+      } else {
+        return "shadowHover";
+      }
     },
   },
 };
@@ -70,11 +84,18 @@ export default {
   position: relative;
   transition: all 0.3s;
 
+  // 基础样式
   &.Tcard-border {
     border: 1px solid rgba(170, 170, 170, 0.5);
     border-radius: 10px;
   }
-  &.Tcard-border:hover {
+  // hover时效果
+  &.shadowHover:hover {
+    box-shadow: 0px 0px 10px 1px gray;
+    transform: translateY(-3px);
+  }
+  // always时效果
+  &.shadowAlways {
     box-shadow: 0px 0px 10px 1px gray;
     transform: translateY(-3px);
   }
