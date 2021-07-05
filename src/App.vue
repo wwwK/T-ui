@@ -6,12 +6,11 @@
       title="阿斯地方法撒地撒手架"
       titleColor="red"
       shadow="hover"
-      :border="false"
     >
       <div>151656</div>
       <template v-slot:bottom> bottom </template>
     </T-card>
-    <T-alert color="#842993" width="1000px" title="大家好这里是标题"
+    <T-alert color="#FF0000" width="1000px" title="大家好这里是标题"
       >骄傲杀敌际佛爱的发董事局覅哦</T-alert
     >
 
@@ -19,6 +18,8 @@
     <T-avatar
       src="https://img0.baidu.com/it/u=3880341262,3308316348&fm=26&fmt=auto&gp=0.jpg"
     />
+
+    <T-breadcrumb :items="items" />
   </div>
 </template>
 
@@ -28,6 +29,16 @@ export default {
   data() {
     return {
       progress: 100,
+      items: [
+        {
+          title: "第一项",
+          url: "#/first",
+        },
+        {
+          title: "第二项",
+          url: "#/er",
+        },
+      ],
     };
   },
 

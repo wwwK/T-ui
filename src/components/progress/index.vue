@@ -1,5 +1,5 @@
 <template>
-  <div class="progressItem">
+  <div class="TprogressItem">
     <div :style="{ ...progressBarStyle }" class="progressBar">
       <div :style="{ ...progressStyle }"></div>
     </div>
@@ -58,21 +58,21 @@ export default {
 </script>
 
 <style scoped>
-.progressItem {
+.TprogressItem {
   display: flex;
   align-items: center;
 }
 
-.progressItem span {
+.TprogressItem span {
   margin: 0 10px;
 }
 
-.progressItem .progressBar {
+.TprogressItem .progressBar {
   width: 100%;
   display: inline-block;
   position: relative;
 }
-.progressItem .progressBar div {
+.TprogressItem .progressBar div {
   position: absolute;
   left: 0;
   top: 0;

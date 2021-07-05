@@ -27,15 +27,15 @@ export default {
     // alert主体颜色
     TalertStyle() {
       return {
-        background: `${this.toRGB(this.color, 0.3)}`,
-        boxShadow: `0px 0px 6px 1px ${this.toRGB(this.color, 0.3)}`,
+        background: `${this.toRGB(this.color, 0.2)}`,
+        boxShadow: `0px 0px 6px 1px ${this.toRGB(this.color, 0.2)}`,
         color: `${this.toRGB(this.color, 1)}`,
       };
     },
     // alert文字颜色
     TalertTitleStyle() {
       return {
-        boxShadow: `0 3px 3px -2px ${this.toRGB(this.color, 0.3)}`,
+        boxShadow: `0 3px 3px -2px ${this.toRGB(this.color, 0.2)}`,
       };
     },
   },
