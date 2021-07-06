@@ -1,9 +1,18 @@
 <template>
   <div class="Tbreadcrumb">
     <ol>
-      <template v-for="it in items">
-        <li :key="it.title" @click="toPath(it.url)">{{ it.title }}</li>
-        <span :key="it.url">•</span>
+      <template v-for="(it, index) in items">
+        <li
+          :key="it.title"
+          @click="toPath(it.url)"
+          :class="{ active: index === items.length - 1 }"
+          :style="{ color: index === items.length - 1 ? activeColor : '' }"
+        >
+          {{ it.title }}
+        </li>
+        <span :key="it.url" v-show="index !== items.length - 1">{{
+          separator
+        }}</span>
       </template>
     </ol>
   </div>
@@ -17,10 +26,17 @@ export default {
       type: Array,
       default: () => [],
     },
+    separator: {
+      type: String,
+      default: () => "•",
+    },
+    activeColor: {
+      type: String,
+      default: () => "rgb(31,116,255)",
+    },
   },
   methods: {
     toPath(url) {
-      console.log(this.$router);
       this.$router.push(url);
     },
   },
@@ -36,7 +52,6 @@ li {
 }
 
 .Tbreadcrumb {
-  outline: 1px solid red;
   display: inline-block;
   padding: 15px 20px;
 
@@ -56,9 +71,6 @@ li {
     span {
       cursor: default;
       margin: 0 10px;
-    }
-    li.active {
-      color: red;
     }
   }
 }

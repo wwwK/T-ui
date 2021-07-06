@@ -39,3 +39,9 @@ Attributes :
 >text 文本 string 默认: T
 >textColor 文本颜色 string 默认: white
 >src 图片路径 string 默认: / 
+
+## 面包屑 T-breadcrumb
+Attributes :
+>items 列表 [{title:标题,url:地址}] 默认: [] 
+>separator 分割符 String 默认: •
+>activeColor 当前选中项的颜色 String 默认: rgb(31,116,255)

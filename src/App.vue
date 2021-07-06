@@ -19,7 +19,7 @@
       src="https://img0.baidu.com/it/u=3880341262,3308316348&fm=26&fmt=auto&gp=0.jpg"
     />
 
-    <T-breadcrumb :items="items" />
+    <T-breadcrumb :items="items" separator="/" />
   </div>
 </template>
 
@@ -37,6 +37,10 @@ export default {
         {
           title: "第二项",
           url: "#/er",
+        },
+        {
+          title: "帅宝",
+          url: "#/shuai",
         },
       ],
     };
