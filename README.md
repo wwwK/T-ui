@@ -22,7 +22,7 @@ Attributes :
 >line 标题线 boolean 默认: true
 >backgroundCard 背景色 string 默认:white
 >border 边框+圆角 boolean 默认:true
->shadow 阴影出现的时机 (always,hover,never) 默认: hover
+>shadow 阴影出现的时机 [always,hover,never] 默认: hover
 
 ## 提示框 T-alert
 Attributes :
@@ -35,7 +35,7 @@ Attributes :
 Attributes :
 >size 宽高 string 默认: 50px
 >radius 方圆 boolean 默认: true
->background 背景颜色 string 默认: gray
+>background 背景颜色(可使用渐变) string 默认: gray
 >text 文本 string 默认: T
 >textColor 文本颜色 string 默认: white
 >src 图片路径 string 默认: / 
@@ -45,3 +45,11 @@ Attributes :
 >items 列表 [{title:标题,url:地址}] 默认: [] 
 >separator 分割符 String 默认: •
 >activeColor 当前选中项的颜色 String 默认: rgb(31,116,255)
+
+## 按钮 T-button
+<font color='red'>fontColor只有在type='filled'时生效</font>
+Attributes :
+>type 按钮样式 [filled,border,flat] 默认: filled 
+>color 按钮主题颜色 16进制颜色 默认: #1F74FF 
+>fontColor 按钮文字颜色 String 默认: white
+>disabled 禁用 Boolean 默认 false

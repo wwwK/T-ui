@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <T-progress :progress="100" :textShow="true" />
+    <T-progress :progress="20" :textShow="true" />
     <T-card
       width="1000px"
-      title="阿斯地方法撒地撒手架"
+      title="大家好这里是标题"
       titleColor="red"
       shadow="hover"
     >
       <div>151656</div>
       <template v-slot:bottom> bottom </template>
     </T-card>
-    <T-alert color="#FF0000" width="1000px" title="大家好这里是标题"
+    <T-alert color="#00FF00" width="1000px" title="大家好这里是标题"
       >骄傲杀敌际佛爱的发董事局覅哦</T-alert
     >
 
@@ -21,8 +21,7 @@
 
     <T-breadcrumb :items="items" separator=">" />
 
-    <T-button>32132</T-button>
-    <T-button color="#FF00FF" disabled>32132</T-button>
+    <T-button type="flat" color="#00ff00">32132</T-button>
   </div>
 </template>
 
